@@ -1,0 +1,101 @@
+# My-Valentines-Letter
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Letter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fef2f7;
+            color: #555;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #f44336;
+        }
+        .letter {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: none;
+            margin-top: 30px;
+        }
+        .button {
+            padding: 15px 30px;
+            background-color: #f44336;
+            color: white;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #d32f2f;
+        }
+        .heart {
+            font-size: 2em;
+            color: red;
+        }
+        /* Image styling */
+        .image-container {
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        #secretImage {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>To My Love ❤️</h1>
+    <p>Click the button below to read my special Valentine's letter to you.</p>
+
+    <div class="image-container">
+        <img src="images/valentine.jpg" alt="Valentine's Day" />
+    </div>
+
+    <button class="button" id="showLetterBtn">Show My Letter</button>
+
+    <div class="letter" id="letter">
+        <h2>Dear [Her Name],</h2>
+        <p>I just wanted to take a moment and tell you how much you mean to me. You've brightened my life in ways I never imagined possible.</p>
+        <p>Your smile is my favorite thing in the world, and every day spent with you is a gift I treasure.</p>
+        <p>I love you more than words can say. My heart is yours, today and always. 💖</p>
+        <div class="heart">&#9829;</div>
+        <button class="button" id="showSecretBtn">Click for a Secret</button>
+
+        <div id="secretMessage" style="display:none; margin-top: 20px;">
+            <p>WILL U BE MY VALENTINESS!!??</p>
+        </div>
+
+        <!-- Image that will appear when the button is clicked -->
+        <div id="secretImage">
+            <img src="image/https://i.pinimg.com/736x/92/94/8d/92948de9d7d2fc787faaff73985ab6bc.jpg" alt="A Secret Image" />
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("showLetterBtn").addEventListener("click", function() {
+            document.getElementById("letter").style.display = "block";
+        });
+
+        document.getElementById("showSecretBtn").addEventListener("click", function() {
+            document.getElementById("secretMessage").style.display = "block";
+            document.getElementById("secretImage").style.display = "block";  // Show the secret image
+        });
+    </script>
+
+</body>
+</html>
